@@ -1,31 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <title>PHP for WordPress</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Varela+Round" rel="stylesheet">
-  <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
-</head>
-<body>
-
-  <header id="masthead">
-    <h1><a href="#">PHP for WordPress</a></h1>
-  </header>
-
+<?php get_header(); ?>
   <div id="content">
 
 <!-- Add any template tags outside of loop -->
 
     <?php if (have_posts()): while (have_posts()): the_post();?>
 
-		      <!-- Add any post template tags inside of loop -->
-                <?php the_title(); ?>
-                <?php the_content(); ?>
-                
-		       <h2><?php the_title();?></h2>
-		    <?php the_content();?>
+				      <!-- Add any post template tags inside of loop -->
+                    <article <?php post_class(); ?>>
 
-		    <?php endwhile;else: ?>
+				       <h2><?php the_title();?></h2>
+				        <?php the_content();?>
+                        <footer>
+                            <p class="byline">
+                                Author:
+                                <a href="<?php echo get_author_posts_url( $post->post_author ); ?>">
+                                    <?php the_author(); ?>
+                                </a> |
+                                Date:
+                                <?php the_time( 'M, j, Y' ) ?> |
+                                Categories:
+                                <?php the_category( ', ' ) ?>
+                                <?php the_tags( '', ', ', '' ); ?>
+                            </p>
+
+                    </article>
+
+				    <?php endwhile;else: ?>
 
       <h2><?php esc_html_e('404 Error', 'phpforwp');?></h2>
       <p><?php esc_html_e('Sorry, content not found.', 'phpforwp');?></p>
@@ -33,10 +33,8 @@
     <?php endif;?>
 
 <!-- Add any template tags outside of loop -->
-    <?php edit_post_link(); ?>
-    <?php the_permalink(); ?>
+    <?php edit_post_link();?>
+    <?php the_permalink();?>
 
-  </div>
-
-</body>
-</html>
+    </div>
+    <?php get_footer();?>
