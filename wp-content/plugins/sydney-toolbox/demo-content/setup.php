@@ -15,11 +15,22 @@ if ( !function_exists( 'sydney_set_import_files' ) ) {
         return array(
             //Default Sydney demo
             array(
-                'import_file_name'              => __('Demo content', 'sydney'),
+                'import_file_name'              => __('Original', 'sydney'),
                 'local_import_file'             => ST_DIR . 'demo-content/demo-content.xml',           
                 'local_import_widget_file'      => ST_DIR . 'demo-content/demo-widgets.wie',
-                'local_import_customizer_file'  => ST_DIR . 'demo-content/demo-customizer.dat',           
+                'local_import_customizer_file'  => ST_DIR . 'demo-content/demo-customizer.dat',      
+                'preview_url'                   => 'https://demo.athemes.com/sydney/',     
+                'import_preview_image_url'      => ST_URI . 'demo-content/previews/original-hero-thumb.jpg', 
+
             ),
+            array(
+                'import_file_name'              => __('Shop', 'sydney'),
+                'local_import_file'             => ST_DIR . 'demo-content/demo-content-shop.xml',           
+                'local_import_widget_file'      => ST_DIR . 'demo-content/demo-widgets-shop.wie',
+                'local_import_customizer_file'  => ST_DIR . 'demo-content/demo-customizer-shop.dat',  
+                'preview_url'                   => 'https://demo.athemes.com/sydney-shop/',     
+                'import_preview_image_url'      => ST_URI . 'demo-content/previews/shop-hero-thumb.jpg', 
+            ),            
         );
     }
 } 

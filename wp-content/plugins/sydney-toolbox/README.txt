@@ -3,7 +3,7 @@ Contributors: athemes, vladff
 Tags: sydney, custom post types, custom fields
 Requires at least: 4.0
 Tested up to: 5.4
-Stable tag: 1.11
+Stable tag: 1.12
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,6 +27,9 @@ None yet.
 == Screenshots ==
 
 == Changelog ==
+
+= 1.12 =
+* Added new Shop demo. For the best design experience, the Sydney theme also needs to be updated.
 
 = 1.11 =
 * Changed JS to provide greater compatibility with other plugins using Owl.
