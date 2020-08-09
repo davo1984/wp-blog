@@ -14,7 +14,7 @@
 
             <?php endif; ?>
 
-            <p>Template: index.php</p>
+            <p>Template: SINGLE.php</p>
 
         </main>
 

@@ -16,25 +16,18 @@
 
       <header id="masthead" class="site-header" role="banner">
 
+        <div class="notice">
+          <p>NEW - Lorem to the sell thisum!</p>
+        </div>
+
         <div class="site-branding">
           <p class="site-title">
-            <a href="<?php echo esc_url( home_url( '/' ) ) ;?>" rel="home">
-              <?php bloginfo( 'name' ); ?>
-            </a>
+            <?php bloginfo( 'name' ); ?>
           </p>
           <p class="site-description" >
             <?php bloginfo( 'description' ); ?>
           </p>
         </div>
-
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-          <?php
-            $args = [
-              'theme_location' => 'main-menu'
-            ];
-            wp_nav_menu( $args );
-          ?>
-        </nav>
 
       </header>
 
