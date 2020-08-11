@@ -1,10 +1,13 @@
 <?php get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area extended">
 
     <main id="main" class="site-main" role="main">
 
-        <h1><?php the_archive_title(); ?></h1>
+        <h1>
+            <?php the_archive_title(); ?>
+            <?php esc_html_e( ' Posts Only!', 'wpheirachy' ); ?>
+        </h1>
         <p><?php echo category_description(); ?></p>
 
         <hr>
@@ -19,7 +22,7 @@
 
         <?php endif; ?>
 
-        <p>Template: CATEGORY.php</p>
+        <p>Template: CATEGORY-16.php >>IMAGES<<</p>
 
     </main>
 

@@ -1,10 +1,13 @@
-<?php get_header(); ?>
+<?php get_header( 'splash' ); ?>
 
 <div id="primary" class="content-area">
 
     <main id="main" class="site-main" role="main">
 
-        <h1><?php the_archive_title(); ?></h1>
+        <h1>
+            <?php the_archive_title(); ?>
+            <?php esc_html_e( ', not the whole thing.', 'wpheirachy' ); ?>
+        </h1>
         <p><?php echo category_description(); ?></p>
 
         <hr>
@@ -19,12 +22,10 @@
 
         <?php endif; ?>
 
-        <p>Template: CATEGORY.php</p>
+        <p>Template: CATEGORY-EXCERPT.php</p>
 
     </main>
 
 </div>
 
-<?php get_sidebar(); ?>
-
-<?php get_footer(); ?>
+<?php get_footer( 'splash' ); ?>
