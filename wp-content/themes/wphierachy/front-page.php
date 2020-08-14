@@ -8,11 +8,7 @@
 
                 <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-            <?php endwhile; else : ?>
-
-                <?php get_template_part( 'template-parts/content-none' ); ?>
-
-            <?php endif; ?>
+            <?php endwhile; endif; ?>
 
             <p>Template: FRONT-PAGE.php</p>
 
