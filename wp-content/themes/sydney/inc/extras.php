@@ -19,6 +19,9 @@ function sydney_body_classes( $classes ) {
 		$classes[] = 'group-blog';
 	}
 
+	$menu_style = get_theme_mod( 'menu_style', 'inline' );
+	$classes[] = 'menu-' . esc_attr( $menu_style );
+	
 	return $classes;
 }
 add_filter( 'body_class', 'sydney_body_classes' );

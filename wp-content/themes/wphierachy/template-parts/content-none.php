@@ -10,7 +10,9 @@
 
     <div class="entry-content">
 
-        <p><?php esc_html_e( 'Sorry Charlie! NO content found.', 'wphierachy' ); ?></p>
+        <p><?php esc_html_e( 'Sorry Charlie! Page NOT found.', 'wphierachy' ); ?></p>
+
+        <p><?php echo get_search_form(); ?></p>
 
     </div>
 

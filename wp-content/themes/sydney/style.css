@@ -4,7 +4,7 @@ Theme URI: https://athemes.com/theme/sydney
 Author: aThemes
 Author URI: https://athemes.com
 Description: Sydney is a powerful business theme that provides a fast way for companies or freelancers to create an awesome online presence. As well as being fully compatible with Elementor, Sydney brings plenty of customization possibilities like access to all Google Fonts, full color control, layout control, logo upload, full screen slider, header image, sticky navigation and much more. Also, Sydney provides all the construction blocks you need to rapidly create an engaging front page.
-Version: 1.65
+Version: 1.66
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tested up to: 5.4
@@ -4091,6 +4091,19 @@ SVGs
 			    -ms-flex-align: center;
 			        align-items: center;
 		}
+		#mainnav > div > ul {
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+		.menu-centered #mainnav > div > ul {
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+				justify-content: center;
+		}
+		.menu-centered .fw-menu-container > .row {
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;			
+		}		
 	}
 	/* Mobile slider */
 	.mobile-slide {
