@@ -1,53 +1,49 @@
-<?php get_header( 'splashX' ); ?>
+<?php get_header(); ?>
 
-    <div id="primary" class="content-area">
+  <div id="primary" class="content-area">
 
-        <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<!--    -->
-                <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                    <header class="entry-header">
+        <article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-                                <?php the_title( '<h1>', '</h1>' ); ?>
+          <header class="entry-header">
 
-                    </header>
+            <?php the_title( '<h1>', '</h1>' ); ?>
 
-                    <div class="entry-content">
+          </header>
 
-                        <p>
-                            <img src="<?php echo $post->guid; ?>" 
-                                alt="<?php echo esc_attr( get_the_title() ); ?>">
-                        </p>
+          <div class="entry-content">
 
-                        <?php the_content(); ?>
+            <p><img src="<?php echo esc_url( $post->guid ); ?>" alt="<?php echo esc_attr( get_the_title() ); ?>"></p>
 
-                    </div>
+            <?php the_content(); ?>
 
-                    <?php if( comments_open() ) : ?>
+          </div>
 
-                        <?php comments_template(); ?>
+          <?php if( comments_open() ) : ?>
 
-                    <?php endif; ?>
+            <?php comments_template(); ?>
 
-                </article>
+          <?php endif; ?>
 
-<!--    -->
+        </article>
 
-            <?php endwhile; else : ?>
 
-                <?php get_template_part( 'template-parts/content-none' ); ?>
+      <?php endwhile; else : ?>
 
-            <?php endif; ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-            <p>Template: IMAGE.php</p>
+      <?php endif; ?>
 
-        </main>
+      <p>Template: image.php</p>
 
-    </div>
+    </main>
 
-    <?php get_sidebar(); ?>
+  </div>
 
-<?php get_footer( 'splashX' ); ?>
+  <?php get_sidebar(); ?>
+
+<?php get_footer(); ?>

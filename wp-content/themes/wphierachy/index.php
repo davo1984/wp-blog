@@ -1,25 +1,25 @@
-<?php get_header( 'splashX' ); ?>
+<?php get_header(); ?>
 
-    <div id="primary" class="content-area">
+  <div id="primary" class="content-area">
 
-        <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-            <?php endwhile; else : ?>
+      <?php endwhile; else : ?>
 
-                <?php get_template_part( 'template-parts/content-none' ); ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-            <?php endif; ?>
+      <?php endif; ?>
 
-            <p>Template: index.php</p>
+      <p>Template: index.php</p>
 
-        </main>
+    </main>
 
-    </div>
+  </div>
 
-    <?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
-<?php get_footer( 'splashX' ); ?>
+<?php get_footer(); ?>

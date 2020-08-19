@@ -1,20 +1,20 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" class="post">
 
-    <header class="entry-header">
-        
-        <h2>
-            <a href="<?php the_permalink(); ?>">
-                <?php echo get_post_type( $post ); ?>:
-                <?php the_title(); ?>
-            </a>
-        </h2>
+  <header class="entry-header">
 
-    </header>
+    <h2 class="search-title">
+      <a href="<?php the_permalink(); ?>">
+        <?php echo get_post_type( $post ); ?>:
+        <?php the_title(); ?>
+      </a>
+    </h2>
 
-    <div class="entry-content">
+  </header>
 
-        <?php the_excerpt(); ?>
+  <div class="entry-content">
 
-    </div>
+    <?php the_excerpt(); ?>
+
+  </div>
 
 </article>

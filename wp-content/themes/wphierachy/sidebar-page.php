@@ -1,11 +1,11 @@
 <?php
 if( ! is_active_sidebar( 'page-sidebar' ) ) {
-    return;
+  return;
 }
 ?>
 
-<aside id="secondary" class="widget-area" role="complementart">
+<aside id="secondary" class="widget-area" role="complementary">
 
-    <?php dynamic_sidebar( 'page-sidebar' ); ?>
+  <?php dynamic_sidebar( 'page-sidebar' ); ?>
 
 </aside>

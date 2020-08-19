@@ -1,23 +1,25 @@
 <?php get_header(); ?>
 
-    <div id="primary" class="content-area extended">
+  <div id="primary" class="content-area extended">
 
-        <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-                <?php get_template_part( 'template-parts/content', 'page' ); ?>
+        <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-            <?php endwhile; endif; ?>
+      <?php endwhile; else : ?>
 
-            <p>Template: FRONT-PAGE.php</p>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-        </main>
+      <?php endif; ?>
 
-        <?php get_sidebar( 'page' ); ?>
+      <p>Template: front-page.php</p>
 
-    </div>
+    </main>
 
-    <?php get_sidebar( 'front-page' ); ?>
+  </div>
+
+  <?php get_sidebar( 'front-page' ); ?>
 
 <?php get_footer(); ?>

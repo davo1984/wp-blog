@@ -1,5 +1,5 @@
-<aside id="secondary" class="widget-area" role="complementart">
+<aside id="secondary" class="widget-area" role="complementary">
 
-    <p>Sidebar SPLASH!!!!</p>
+  <p>Sell something major!</p>
 
 </aside>

@@ -1,25 +1,27 @@
 <?php get_header(); ?>
 
-<div id="primary" class="content-area">
+  <div id="primary" class="content-area narrow">
 
     <main id="main" class="site-main" role="main">
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <h1><?php the_archive_title(); ?></h1>
 
-            <?php get_template_part( 'template-parts/content-posts', get_post_format() ); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <?php endwhile; else : ?>
+        <?php get_template_part( 'template-parts/content-posts', get_post_format() ); ?>
 
-            <?php get_template_part( 'template-parts/content-none' ); ?>
+      <?php endwhile; else : ?>
 
-        <?php endif; ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-        <p>Template: TAXONOMY.php</p>
+      <?php endif; ?>
+
+      <?php echo paginate_links(); ?>
+
+      <p>Template: taxonomy.php</p>
 
     </main>
 
-</div>
-
-<?php get_sidebar(); ?>
+  </div>
 
 <?php get_footer(); ?>

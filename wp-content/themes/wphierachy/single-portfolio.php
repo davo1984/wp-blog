@@ -1,46 +1,49 @@
-<?php get_header( 'splash' ); ?>
+<?php get_header(); ?>
 
-    <div id="primary" class="content-area extended">
+  <div id="primary" class="content-area extended">
 
-        <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-                <header class="entry-header">
-                    
-                    <?php the_title( '<h1>', '</h1>' ); ?>
+          <header class="entry-header">
 
-                    <a href="<?php the_permalink(); ?>">
-                        <?php the_post_thumbnail( 'full' ); ?>
-                    </a>
+            <?php the_title( '<h1>', '</h1>' ); ?>
 
-                </header>
+          </header>
 
-                <div class="entry-content">
+          <div class="entry-content">
 
-                    <?php the_content(); ?>
+            <a href="<?php the_permalink(); ?>">
+              <?php the_post_thumbnail( 'full' ); ?>
+            </a>
 
-                    <p>
-                        Skills:
-                        <?php the_terms( $post->ID, 'skills' ); ?>
-                    </p>
+            <?php the_content(); ?>
 
-                    <p>
-                        <a class='button' href="<?php the_field( 'url' ); ?>"><?php esc_html_e( 'Visit this Site' ) ?></a>
-                    </p>
+            <p>
+              Skills:
+              <?php the_terms( $post->ID, 'skills' ); ?>
+            </p>
 
-                </div>
+            <p>
+              <a class="button" href="<?php the_field( 'url' ); ?>">
+                <?php esc_html_e( 'Visit the Site', 'wphierarchy' ); ?>
+              </a>
+            </p>
 
-            </article>
+          </div>
 
-            <?php endwhile; endif; ?>
+        </article>
 
-            <p>Template: SINGLE-PORTFOLIO.php</p>
 
-        </main>
+      <?php endwhile; endif; ?>
 
-    </div>
+      <p>Template: single-portfolio.php</p>
 
-<?php get_footer( 'splash' ); ?>
+    </main>
+
+  </div>
+
+<?php get_footer(); ?>

@@ -1,53 +1,29 @@
-<?php get_header( 'splashX' ); ?>
+<?php get_header(); ?>
 
-    <div id="primary" class="content-area">
-
-        <main id="main" class="site-main" role="main">
-
-            <h1><?php wp_title( '' ); ?></h1>
-
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-                <?php get_template_part( 'template-parts/content-posts', get_post_format() ); ?>
-
-            <?php endwhile; else : ?>
-
-                <?php get_template_part( 'template-parts/content-none' ); ?>
-
-            <?php endif; ?>
-
-            <?php echo paginate_links(); ?>
-
-            <p>Template: HOME.php</p>
-
-        </main>
-
-    </div>
-
-    <?php get_sidebar(); ?>
-
-<?php get_footer( 'splashX' ); ?><?php get_header( 'splashX' ); ?>
-
-<div id="primary" class="content-area">
+  <div id="primary" class="content-area">
 
     <main id="main" class="site-main" role="main">
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <h1><?php wp_title( '' ); ?></h1>
 
-            <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <?php endwhile; else : ?>
+        <?php get_template_part( 'template-parts/content-posts', get_post_format() ); ?>
 
-            <?php get_template_part( 'template-parts/content-none' ); ?>
+      <?php endwhile; else : ?>
 
-        <?php endif; ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-        <p>Template: index.php</p>
+      <?php endif; ?>
+
+      <?php echo paginate_links(); ?>
+
+      <p>Template: home.php</p>
 
     </main>
 
-</div>
+  </div>
 
-<?php get_sidebar(); ?>
+  <?php get_sidebar(); ?>
 
-<?php get_footer( 'splashX' ); ?>
+<?php get_footer(); ?>

@@ -1,13 +1,13 @@
 
-</div><!-- #content -->
+  </div><!-- #content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+  <footer id="colophon" class="site-footer" role="contentinfo">
 
-  <div class="notice">
-    <p>Don't forget to sign up!</p>
-  </div>
+    <div class="notice">
+      <p>Don't forget to sign up!</p>
+    </div>
 
-</footer>
+  </footer>
 
 </div><!-- #page -->
 

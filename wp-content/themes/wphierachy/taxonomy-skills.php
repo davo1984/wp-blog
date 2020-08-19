@@ -1,25 +1,27 @@
 <?php get_header(); ?>
 
-<div id="primary" class="content-area extended">
+  <div id="primary" class="content-area extended">
 
     <main id="main" class="site-main" role="main">
 
-        <h1><?php the_archive_title(); ?></h1>
+      <h1><?php the_archive_title(); ?></h1>
 
-        <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-            <?php get_template_part( 'template-parts/content', 'portfolio' ); ?>
+        <?php get_template_part( 'template-parts/content', 'portfolio' ); ?>
 
-        <?php endwhile; else : ?>
+      <?php endwhile; else : ?>
 
-            <?php get_template_part( 'template-parts/content-none' ); ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-        <?php endif; ?>
+      <?php endif; ?>
 
-        <p>Template: TAXONOMY-SKILLS.php</p>
+      <?php echo paginate_links(); ?>
+
+      <p>Template: taxonomy-skills.php</p>
 
     </main>
 
-</div>
+  </div>
 
 <?php get_footer(); ?>

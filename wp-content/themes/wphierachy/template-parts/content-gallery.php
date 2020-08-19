@@ -1,24 +1,26 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-    <header class="entry-header">
+  <header class="entry-header">
 
-  <span class="dashicons dashicons-format-<?php echo get_post_format( $post->ID ); ?>"></span>
-  <p><?php esc_html_e( 'Enjoy this gallery post!!!', 'wphierarchy' ); ?>
+    <span class="dashicons dashicons-format-<?php echo get_post_format( $post->ID ); ?>"></span>
 
-        <?php the_title( '<h1>', '</h1>' ); ?>
+    <?php the_title( '<h1>', '</h1>' ); ?>
 
-    </header>
+  </header>
 
-    <div class="entry-content">
+  <div class="entry-content">
 
-        <?php the_content(); ?>
+    <?php the_content(); ?>
 
-    </div>
+  </div>
 
-    <?php if( comments_open() ) : ?>
+  <?php if( comments_open() ) : ?>
 
-        <?php comments_template(); ?>
+    <?php comments_template(); ?>
 
-    <?php endif; ?>
+  <?php endif; ?>
+
+
+
 
 </article>

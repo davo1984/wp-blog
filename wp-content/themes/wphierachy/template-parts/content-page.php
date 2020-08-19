@@ -1,15 +1,15 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-    <header class="entry-header">
-        
-        <?php the_title( '<h1>', '</h1>' ); ?>
+  <header class="entry-header">
 
-    </header>
+    <?php the_title( '<h1>', '</h1>' ); ?>
 
-    <div class="entry-content">
+  </header>
 
-        <?php the_content(); ?>
+  <div class="entry-content">
 
-    </div>
+    <?php the_content(); ?>
+
+  </div>
 
 </article>

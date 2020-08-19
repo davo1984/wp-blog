@@ -1,19 +1,19 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-    <header class="entry-header">
-        
-        <?php the_title( '<h2><a href="' . get_the_permalink() . '">', '</a></h2>' ); ?>
+  <header class="entry-header">
 
-        <a href="<?php the_permalink(); ?>">
-            <?php the_post_thumbnail( 'full' ); ?>
-        </a>
+    <?php the_title( '<h2><a href="' . get_the_permalink() .'">', '</a></h2>' ); ?>
 
-    </header>
+    <a href="<?php the_permalink(); ?>">
+      <?php the_post_thumbnail( 'full' ); ?>
+    </a>
 
-    <div class="entry-content">
+  </header>
 
-        <?php the_excerpt(); ?>
+  <div class="entry-content">
 
-    </div>
+    <?php the_excerpt(); ?>
+
+  </div>
 
 </article>

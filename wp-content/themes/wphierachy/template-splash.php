@@ -2,29 +2,26 @@
   // Template Name: Splash Page
   // Template Post Type: post, page
 ?>
-
 <?php get_header( 'splash' ); ?>
 
-    <div id="primary" class="content-area extended">
+  <div id="primary" class="content-area extended">
 
-        <main id="main" class="site-main" role="main">
+    <main id="main" class="site-main" role="main">
 
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+      <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<!-- conditional here to display differently in post or page!
-    Review  Lesson # 64 -->
-                <?php get_template_part( 'template-parts/content', 'page' ); ?>
+        <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-            <?php endwhile; else : ?>
+      <?php endwhile; else : ?>
 
-                <?php get_template_part( 'template-parts/content-none' ); ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
-            <?php endif; ?>
+      <?php endif; ?>
 
-            <p>Template: TEMPLATE-SPLASH.php</p>
+      <p>Template: template-splash.php</p>
 
-        </main>
+    </main>
 
-    </div>
+  </div>
 
 <?php get_footer( 'splash' ); ?>

@@ -1,27 +1,30 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-    <header class="entry-header">
+  <header class="entry-header">
 
-  <span class="dashicons dashicons-format-<?php echo get_post_format( $post->ID ); ?>"></span>
-        
-        <?php the_title( '<h1>', '</h1>' ); ?>
+    <span class="dashicons dashicons-format-<?php echo get_post_format( $post->ID ); ?>"></span>
 
-<div class="byline">
-    <?php esc_html_e( 'Author:' ); ?> <?php the_author_posts_link(); ?>
-</div>
+    <?php the_title( '<h1>', '</h1>' ); ?>
 
-    </header>
-
-    <div class="entry-content">
-
-        <?php the_content(); ?>
-
+    <div class="byline">
+      <?php esc_html_e( 'Author:' ); ?> <?php the_author(); ?>
     </div>
 
-    <?php if( comments_open() ) : ?>
+  </header>
 
-        <?php comments_template(); ?>
+  <div class="entry-content">
 
-    <?php endif; ?>
+    <?php the_content(); ?>
+
+  </div>
+
+  <?php if( comments_open() ) : ?>
+
+    <?php comments_template(); ?>
+
+  <?php endif; ?>
+
+
+
 
 </article>
