@@ -1,13 +1,13 @@
 
   </div><!-- #content -->
 
-<footer id="colophon" class="site-footer" role="contentinfo">
+  <footer id="colophon" class="site-footer" role="contentinfo">
 
-  <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wphierarchy' ) ); ?>">
-    <?php printf( esc_html__( 'Proudly powered by %s', 'wphierarchy' ), 'WordPress' ); ?>
-  </a>
+    <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wptags' ) ); ?>">
+      <?php printf( esc_html__( 'Proudly powered by %s', 'wptags' ), 'WordPress' ); ?>
+    </a>
 
-</footer>
+  </footer>
 
 </div><!-- #page -->
 

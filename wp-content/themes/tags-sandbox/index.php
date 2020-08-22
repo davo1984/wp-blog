@@ -6,15 +6,23 @@
 
       <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-        <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+        <article id="post-<?php the_ID(); ?>"  <?php post_class(); ?>>
 
-      <?php endwhile; else : ?>
+          <header class="entry-header">
 
-        <?php get_template_part( 'template-parts/content', 'none' ); ?>
+            <?php the_title(); ?>
 
-      <?php endif; ?>
+          </header>
 
-      <p>Template: index.php</p>
+          <div class="entry-content">
+
+            <?php the_content(); ?>
+
+          </div>
+
+        </article>
+
+      <?php endwhile; endif; ?>
 
     </main>
 
